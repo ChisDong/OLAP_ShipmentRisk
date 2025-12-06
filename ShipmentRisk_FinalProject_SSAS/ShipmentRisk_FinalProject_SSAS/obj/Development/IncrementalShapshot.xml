@@ -1,0 +1,96 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>ShipmentRisk_FinalProject_SSAS</Database>
+    <Server>LAPTOP-5SE9LHBT\NHIEM</Server>
+    <ConnectionString>Data Source=LAPTOP-5SE9LHBT\NHIEM;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>0vYgpmHRG5d9JNG+2elsQdxzuX8=12/5/2025 5:53:55 PM12/5/2025 5:53:55 PM</TimeStamp>
+        <ID>
+          <String>DOAN</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>3482Ie7zbqJEyHCtbLc9G/sFRqM=12/5/2025 5:54:22 PM12/5/2025 5:54:21 PM</TimeStamp>
+        <ID>
+          <String>DOAN</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>EyDjhHBkD9ihI1J+xuY0k+6Bl5w=12/5/2025 5:54:45 PM12/5/2025 5:54:45 PM</TimeStamp>
+        <ID>
+          <String>Dim Product Category</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>uGzLpRQ5RHNvSMEjC82smtF9J1k=12/5/2025 5:54:45 PM12/5/2025 5:54:45 PM</TimeStamp>
+        <ID>
+          <String>Dim Date</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>gnlBm+8HdRbPsBxqK2iydCTv5SU=12/5/2025 5:54:45 PM12/5/2025 5:54:45 PM</TimeStamp>
+        <ID>
+          <String>Dim Shipping Mode</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>GNfDao8dpxk2MoTaOYxap3fAEN8=12/5/2025 5:54:45 PM12/5/2025 5:54:45 PM</TimeStamp>
+        <ID>
+          <String>Dim Buyer</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>YWGJhB75yvLxxkxYj7ARd8XmMvY=12/5/2025 5:54:45 PM12/5/2025 5:54:45 PM</TimeStamp>
+        <ID>
+          <String>Dim Disruption</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>mhJqJcJ5Az9/wnQDzdcFmTwkT4U=12/5/2025 5:54:45 PM12/5/2025 5:54:45 PM</TimeStamp>
+        <ID>
+          <String>Dim Supplier</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>EtbMI7CtfhTuxTXfltQstqATX8E=12/5/2025 6:03:07 PM12/5/2025 5:54:45 PML/i0UxzUgWRrLQ+X6wcS6ClSIFw=12/5/2025 5:54:45 PM12/5/2025 5:54:45 PM</TimeStamp>
+        <ID>
+          <String>DOAN</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>MDND/26q83a9ZLQ3NLU2tkhqRm4=12/5/2025 5:52:58 PM12/5/2025 5:52:57 PM</TimeStamp>
+      <ID>
+        <String>ShipmentRisk_FinalProject_SSAS</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2025-12-05T14:53:36.3Z</LastDeployed>
+</DeploymentSnapshot>
