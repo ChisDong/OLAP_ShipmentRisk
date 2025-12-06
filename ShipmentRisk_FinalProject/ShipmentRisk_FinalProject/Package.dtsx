@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="24"
-  DTS:VersionGUID="{19817975-F5BC-4EDA-96CA-824608741A82}">
+  DTS:VersionBuild="29"
+  DTS:VersionGUID="{BCB1A215-6D07-47FA-A0A3-B3F5628B6D75}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -829,7 +829,6 @@
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Organization_ID"
-                      cachedSortKeyPosition="2"
                       externalMetadataColumnId="Package\Data Flow Task\Dim_Buyer.Inputs[OLE DB Destination Input].ExternalColumns[Organization_ID]"
                       lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[Organization_ID]" />
                     <inputColumn
@@ -838,7 +837,6 @@
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Dominant_Buyer_Flag"
-                      cachedSortKeyPosition="3"
                       externalMetadataColumnId="Package\Data Flow Task\Dim_Buyer.Inputs[OLE DB Destination Input].ExternalColumns[Dominant_Buyer_Flag]"
                       lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[Dominant_Buyer_Flag]" />
                     <inputColumn
@@ -847,7 +845,6 @@
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Available_Historical_Records"
-                      cachedSortKeyPosition="5"
                       externalMetadataColumnId="Package\Data Flow Task\Dim_Buyer.Inputs[OLE DB Destination Input].ExternalColumns[Available_Historical_Records]"
                       lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[Available_Historical_Records]" />
                     <inputColumn
@@ -856,7 +853,6 @@
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Data_Sharing_Consent"
-                      cachedSortKeyPosition="4"
                       externalMetadataColumnId="Package\Data Flow Task\Dim_Buyer.Inputs[OLE DB Destination Input].ExternalColumns[Data_Sharing_Consent]"
                       lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[Data_Sharing_Consent]" />
                   </inputColumns>
@@ -868,11 +864,15 @@
                       name="BuyerKey" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Dim_Buyer.Inputs[OLE DB Destination Input].ExternalColumns[Buyer_ID]"
-                      dataType="i4"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Buyer_ID" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Dim_Buyer.Inputs[OLE DB Destination Input].ExternalColumns[Organization_ID]"
-                      dataType="i4"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Organization_ID" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Dim_Buyer.Inputs[OLE DB Destination Input].ExternalColumns[Dominant_Buyer_Flag]"
@@ -990,13 +990,13 @@
                       refId="Package\Data Flow Task\Dim_Date.Inputs[OLE DB Destination Input].Columns[DateKey]"
                       cachedDataType="i4"
                       cachedName="DateKey"
-                      cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\Data Flow Task\Dim_Date.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
                       lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[DateKey]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Dim_Date.Inputs[OLE DB Destination Input].Columns[FullDate]"
                       cachedDataType="dbDate"
                       cachedName="FullDate"
+                      cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\Data Flow Task\Dim_Date.Inputs[OLE DB Destination Input].ExternalColumns[FullDate]"
                       lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[FullDate]" />
                     <inputColumn
@@ -1303,6 +1303,7 @@
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Product_Category"
+                      cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\Data Flow Task\Dim_ProductCategory.Inputs[OLE DB Destination Input].ExternalColumns[Product_Category]"
                       lineageId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[Product_Category]" />
                   </inputColumns>
@@ -1314,7 +1315,8 @@
                       name="ProductCategoryKey" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Dim_ProductCategory.Inputs[OLE DB Destination Input].ExternalColumns[Product_Category]"
-                      dataType="wstr"
+                      codePage="1252"
+                      dataType="str"
                       length="100"
                       name="Product_Category" />
                   </externalMetadataColumns>
@@ -1435,7 +1437,8 @@
                       name="ShippingModeKey" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Dim_ShippingMode.Inputs[OLE DB Destination Input].ExternalColumns[Shipping_Mode]"
-                      dataType="wstr"
+                      codePage="1252"
+                      dataType="str"
                       length="50"
                       name="Shipping_Mode" />
                   </externalMetadataColumns>
@@ -1544,6 +1547,7 @@
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Supplier_ID"
+                      cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\Data Flow Task\Dim_Supplier.Inputs[OLE DB Destination Input].ExternalColumns[Supplier_ID]"
                       lineageId="Package\Data Flow Task\Sort 4.Outputs[Sort Output].Columns[Supplier_ID]" />
                     <inputColumn
@@ -1571,7 +1575,9 @@
                       name="SupplierKey" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Dim_Supplier.Inputs[OLE DB Destination Input].ExternalColumns[Supplier_ID]"
-                      dataType="i4"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Supplier_ID" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Dim_Supplier.Inputs[OLE DB Destination Input].ExternalColumns[Supplier_Reliability_Score]"
@@ -2882,7 +2888,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">1</property>
+                          name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -2898,7 +2904,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          name="NewSortKeyPosition">1</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -3355,8 +3361,7 @@
                       refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[DateKey]"
                       dataType="i4"
                       lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[DateKey]"
-                      name="DateKey"
-                      sortKeyPosition="1">
+                      name="DateKey">
                       <properties>
                         <property
                           containsID="true"
@@ -3369,7 +3374,8 @@
                       refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[FullDate]"
                       dataType="dbDate"
                       lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[FullDate]"
-                      name="FullDate">
+                      name="FullDate"
+                      sortKeyPosition="1">
                       <properties>
                         <property
                           containsID="true"
@@ -3459,7 +3465,7 @@
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the Sort transformation removes rows with duplicate sort values."
-                  name="EliminateDuplicates">false</property>
+                  name="EliminateDuplicates">true</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the maximum number of threads to use for sorting."
@@ -3756,7 +3762,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">2</property>
+                          name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -3774,7 +3780,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">3</property>
+                          name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -3792,7 +3798,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">5</property>
+                          name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -3810,7 +3816,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">4</property>
+                          name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -4145,8 +4151,7 @@
                       dataType="str"
                       length="50"
                       lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[Organization_ID]"
-                      name="Organization_ID"
-                      sortKeyPosition="2">
+                      name="Organization_ID">
                       <properties>
                         <property
                           containsID="true"
@@ -4161,8 +4166,7 @@
                       dataType="str"
                       length="50"
                       lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[Dominant_Buyer_Flag]"
-                      name="Dominant_Buyer_Flag"
-                      sortKeyPosition="3">
+                      name="Dominant_Buyer_Flag">
                       <properties>
                         <property
                           containsID="true"
@@ -4177,8 +4181,7 @@
                       dataType="str"
                       length="50"
                       lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[Available_Historical_Records]"
-                      name="Available_Historical_Records"
-                      sortKeyPosition="5">
+                      name="Available_Historical_Records">
                       <properties>
                         <property
                           containsID="true"
@@ -4193,8 +4196,7 @@
                       dataType="str"
                       length="50"
                       lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[Data_Sharing_Consent]"
-                      name="Data_Sharing_Consent"
-                      sortKeyPosition="4">
+                      name="Data_Sharing_Consent">
                       <properties>
                         <property
                           containsID="true"
@@ -4294,7 +4296,7 @@
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the Sort transformation removes rows with duplicate sort values."
-                  name="EliminateDuplicates">false</property>
+                  name="EliminateDuplicates">true</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the maximum number of threads to use for sorting."
@@ -4357,7 +4359,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">1</property>
+                          name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -4375,7 +4377,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          name="NewSortKeyPosition">1</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -4555,7 +4557,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">3</property>
+                          name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -4573,7 +4575,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">2</property>
+                          name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -4784,8 +4786,7 @@
                       dataType="str"
                       length="50"
                       lineageId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[Supplier_ID]"
-                      name="Supplier_ID"
-                      sortKeyPosition="1">
+                      name="Supplier_ID">
                       <properties>
                         <property
                           containsID="true"
@@ -4800,7 +4801,8 @@
                       dataType="str"
                       length="50"
                       lineageId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[Product_Category]"
-                      name="Product_Category">
+                      name="Product_Category"
+                      sortKeyPosition="1">
                       <properties>
                         <property
                           containsID="true"
@@ -4950,8 +4952,7 @@
                       dataType="str"
                       length="50"
                       lineageId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[Historical_Disruption_Count]"
-                      name="Historical_Disruption_Count"
-                      sortKeyPosition="3">
+                      name="Historical_Disruption_Count">
                       <properties>
                         <property
                           containsID="true"
@@ -4966,8 +4967,7 @@
                       dataType="str"
                       length="50"
                       lineageId="Package\Data Flow Task\Sort 3.Outputs[Sort Output].Columns[Supplier_Reliability_Score]"
-                      name="Supplier_Reliability_Score"
-                      sortKeyPosition="2">
+                      name="Supplier_Reliability_Score">
                       <properties>
                         <property
                           containsID="true"
@@ -5127,7 +5127,7 @@
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the Sort transformation removes rows with duplicate sort values."
-                  name="EliminateDuplicates">false</property>
+                  name="EliminateDuplicates">true</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the maximum number of threads to use for sorting."
@@ -5190,7 +5190,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          name="NewSortKeyPosition">1</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -5208,7 +5208,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">1</property>
+                          name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -5617,7 +5617,8 @@
                       dataType="str"
                       length="50"
                       lineageId="Package\Data Flow Task\Sort 4.Outputs[Sort Output].Columns[Supplier_ID]"
-                      name="Supplier_ID">
+                      name="Supplier_ID"
+                      sortKeyPosition="1">
                       <properties>
                         <property
                           containsID="true"
@@ -5632,8 +5633,7 @@
                       dataType="str"
                       length="50"
                       lineageId="Package\Data Flow Task\Sort 4.Outputs[Sort Output].Columns[Product_Category]"
-                      name="Product_Category"
-                      sortKeyPosition="1">
+                      name="Product_Category">
                       <properties>
                         <property
                           containsID="true"
@@ -5958,7 +5958,7 @@
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the Sort transformation removes rows with duplicate sort values."
-                  name="EliminateDuplicates">false</property>
+                  name="EliminateDuplicates">true</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the maximum number of threads to use for sorting."
@@ -6789,7 +6789,7 @@
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the Sort transformation removes rows with duplicate sort values."
-                  name="EliminateDuplicates">false</property>
+                  name="EliminateDuplicates">true</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the maximum number of threads to use for sorting."
@@ -7727,11 +7727,11 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="152,42.6666666666667"
+          Size="152,43"
           Id="Package\Data Flow Task"
           TopLeft="112.374995222315,138.09999367714" />
         <NodeLayout
-          Size="164,42.6666666666667"
+          Size="164,43"
           Id="Package\Execute SQL Task"
           TopLeft="5.5,5.5" />
         <EdgeLayout
@@ -7777,61 +7777,99 @@
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="98.6666666666667,42.6666666666667"
-          Id="Package\Data Flow Task\Sort 1"
-          TopLeft="705.913437157153,140.684610471267" />
+          Size="99,43"
+          Id="Package\Data Flow Task\Sort 4"
+          TopLeft="679.96152029817,465.292303911814" />
         <NodeLayout
-          Size="126.666666666667,42.6666666666667"
-          Id="Package\Data Flow Task\Dim_Date"
-          TopLeft="895.16664488117,128.369226897038" />
-        <NodeLayout
-          Size="152,42.6666666666667"
-          Id="Package\Data Flow Task\Flat File Source"
-          TopLeft="67.2692289283643,313.253836935575" />
-        <NodeLayout
-          Size="98.6666666666667,42.6666666666667"
-          Id="Package\Data Flow Task\Sort 6"
-          TopLeft="467.96152029817,644.625637245147" />
-        <NodeLayout
-          Size="98.6666666666667,42.6666666666667"
-          Id="Package\Data Flow Task\Sort 3"
-          TopLeft="679.499979704619,335.702559932348" />
-        <NodeLayout
-          Size="121.333333333334,42.6666666666667"
-          Id="Package\Data Flow Task\Multicast"
-          TopLeft="316.269221507586,315.023067652079" />
-        <NodeLayout
-          Size="170.666666666667,42.6666666666667"
-          Id="Package\Data Flow Task\Dim_ShippingMode"
-          TopLeft="895.16664488117,539.035893563705" />
-        <NodeLayout
-          Size="152,42.6666666666667"
-          Id="Package\Data Flow Task\Dim_Disruption"
-          TopLeft="895.16664488117,641.702560230371" />
-        <NodeLayout
-          Size="98.6666666666667,42.6666666666667"
-          Id="Package\Data Flow Task\Sort 5"
-          TopLeft="590.96152029817,535.95897057848" />
-        <NodeLayout
-          Size="182.666666666667,42.6666666666667"
-          Id="Package\Data Flow Task\Dim_ProductCategory"
-          TopLeft="895.16664488117,333.702560230371" />
-        <NodeLayout
-          Size="108,42.6666666666667"
+          Size="108,43"
           Id="Package\Data Flow Task\Sort 2"
           TopLeft="672.115364182454,256.882046699187" />
         <NodeLayout
-          Size="142.666666666667,42.6666666666667"
-          Id="Package\Data Flow Task\Dim_Supplier"
-          TopLeft="903.16664488117,458.369226897038" />
+          Size="99,43"
+          Id="Package\Data Flow Task\Sort 1"
+          TopLeft="705.913437157153,140.684610471267" />
         <NodeLayout
-          Size="130.666666666667,42.6666666666667"
+          Size="152,43"
+          Id="Package\Data Flow Task\Flat File Source"
+          TopLeft="67.2692289283643,313.253836935575" />
+        <NodeLayout
+          Size="99,43"
+          Id="Package\Data Flow Task\Sort 6"
+          TopLeft="467.96152029817,644.625637245147" />
+        <NodeLayout
+          Size="127,43"
+          Id="Package\Data Flow Task\Dim_Date"
+          TopLeft="895.16664488117,128.369226897038" />
+        <NodeLayout
+          Size="171,43"
+          Id="Package\Data Flow Task\Dim_ShippingMode"
+          TopLeft="895.16664488117,539.035893563705" />
+        <NodeLayout
+          Size="99,43"
+          Id="Package\Data Flow Task\Sort 3"
+          TopLeft="679.499979704619,335.702559932348" />
+        <NodeLayout
+          Size="152,43"
+          Id="Package\Data Flow Task\Dim_Disruption"
+          TopLeft="895.16664488117,641.702560230371" />
+        <NodeLayout
+          Size="99,43"
+          Id="Package\Data Flow Task\Sort 5"
+          TopLeft="590.96152029817,535.95897057848" />
+        <NodeLayout
+          Size="131,43"
           Id="Package\Data Flow Task\Dim_Buyer"
           TopLeft="895.16664488117,231.035893563705" />
         <NodeLayout
-          Size="98.6666666666667,42.6666666666667"
-          Id="Package\Data Flow Task\Sort 4"
-          TopLeft="679.96152029817,465.292303911814" />
+          Size="121,43"
+          Id="Package\Data Flow Task\Multicast"
+          TopLeft="316.269221507586,315.023067652079" />
+        <NodeLayout
+          Size="143,43"
+          Id="Package\Data Flow Task\Dim_Supplier"
+          TopLeft="903.16664488117,458.369226897038" />
+        <NodeLayout
+          Size="155,43"
+          Id="Package\Data Flow Task\Derived Column"
+          TopLeft="387.374982928858,132.249993956089" />
+        <NodeLayout
+          Size="183,43"
+          Id="Package\Data Flow Task\Dim_ProductCategory"
+          TopLeft="895.16664488117,333.702560230371" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Sort Output5]"
+          TopLeft="804.58010382382,162.017943804601">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="90.5865410573502,-12.315383574229"
+              Start="0,0"
+              End="83.0865410573502,-12.315383574229">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="41.2932705286751,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="41.2932705286751,0"
+                    Point2="45.2932705286751,0"
+                    Point3="45.2932705286751,-4" />
+                  <mssgle:LineSegment
+                    End="45.2932705286751,-8.31538357422897" />
+                  <mssgle:CubicBezierSegment
+                    Point1="45.2932705286751,-8.31538357422897"
+                    Point2="45.2932705286751,-12.315383574229"
+                    Point3="49.2932705286751,-12.315383574229" />
+                  <mssgle:LineSegment
+                    End="83.0865410573502,-12.315383574229" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Sort Output4]"
           TopLeft="566.96152029817,664.664098737759">
@@ -7946,6 +7984,40 @@
                     Point3="61.525640349358,-25.846153135482" />
                   <mssgle:LineSegment
                     End="107.551280698716,-25.846153135482" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Multicast Output 7]"
+          TopLeft="376.935888174253,315.023067652079">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="87.7724280879382,-140.106407029323"
+              Start="0,0"
+              End="87.7724280879382,-132.606407029323">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-66.0532035146617" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-66.0532035146617"
+                    Point2="0,-70.0532035146617"
+                    Point3="4,-70.0532035146617" />
+                  <mssgle:LineSegment
+                    End="83.7724280879382,-70.0532035146617" />
+                  <mssgle:CubicBezierSegment
+                    Point1="83.7724280879382,-70.0532035146617"
+                    Point2="87.7724280879382,-70.0532035146617"
+                    Point3="87.7724280879382,-74.0532035146617" />
+                  <mssgle:LineSegment
+                    End="87.7724280879382,-132.606407029323" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8146,44 +8218,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="154.666666666667,42.6666666666667"
-          Id="Package\Data Flow Task\Derived Column"
-          TopLeft="387.374982928858,132.249993956089" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Multicast Output 7]"
-          TopLeft="376.935888174253,315.023067652079">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="87.7724280879382,-140.106407029323"
-              Start="0,0"
-              End="87.7724280879382,-132.606407029323">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-66.0532035146617" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-66.0532035146617"
-                    Point2="0,-70.0532035146617"
-                    Point3="4,-70.0532035146617" />
-                  <mssgle:LineSegment
-                    End="83.7724280879382,-70.0532035146617" />
-                  <mssgle:CubicBezierSegment
-                    Point1="83.7724280879382,-70.0532035146617"
-                    Point2="87.7724280879382,-70.0532035146617"
-                    Point3="87.7724280879382,-74.0532035146617" />
-                  <mssgle:LineSegment
-                    End="87.7724280879382,-132.606407029323" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output]"
           TopLeft="542.041649595524,153.583327289423">
@@ -8210,40 +8244,6 @@
                     Point3="85.9358937808144,8.43461651517811" />
                   <mssgle:LineSegment
                     End="156.371787561629,8.43461651517811" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Sort Output5]"
-          TopLeft="804.58010382382,162.017943804601">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="90.5865410573502,-12.315383574229"
-              Start="0,0"
-              End="83.0865410573502,-12.315383574229">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="41.2932705286751,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="41.2932705286751,0"
-                    Point2="45.2932705286751,0"
-                    Point3="45.2932705286751,-4" />
-                  <mssgle:LineSegment
-                    End="45.2932705286751,-8.31538357422897" />
-                  <mssgle:CubicBezierSegment
-                    Point1="45.2932705286751,-8.31538357422897"
-                    Point2="45.2932705286751,-12.315383574229"
-                    Point3="49.2932705286751,-12.315383574229" />
-                  <mssgle:LineSegment
-                    End="83.0865410573502,-12.315383574229" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8295,7 +8295,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Dim_ProductCategory">
+    design-time-name="Package\Data Flow Task\Dim_Buyer">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -8321,7 +8321,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Dim_Buyer">
+    design-time-name="Package\Data Flow Task\Dim_ProductCategory">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
