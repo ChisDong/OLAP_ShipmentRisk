@@ -14,7 +14,6 @@ CREATE TABLE DimDate (
 CREATE TABLE DimBuyer (
     BuyerKey                    INT IDENTITY(1,1) PRIMARY KEY,
     Buyer_ID                    VARCHAR(50)             NOT NULL,  
-    Organization_ID             VARCHAR(50)             NULL,
     Dominant_Buyer_Flag         BIT             NULL,
     Data_Sharing_Consent        BIT             NULL,
     Available_Historical_Records INT            NULL
@@ -44,10 +43,16 @@ CREATE TABLE DimDisruption (
     Disruption_Severity  VARCHAR(50)  NULL
 );
 
+CREATE TABLE DimOrganization (
+	OrganizationKey INT IDENTITY(1,1) PRIMARY KEY,
+	Organization_ID VARCHAR(50) NOT NULL,
+)
+
 CREATE TABLE FactShipment (
     ShipmentKey INT IDENTITY(1,1) PRIMARY KEY,
 
     BuyerKey INT FOREIGN KEY REFERENCES DimBuyer(BuyerKey),
+	OrganizationKey INT FOREIGN KEY REFERENCES DimOrganization(OrganizationKey),
     SupplierKey INT FOREIGN KEY REFERENCES DimSupplier(SupplierKey),
     ProductCategoryKey INT FOREIGN KEY REFERENCES DimProductCategory(ProductCategoryKey),
     ShippingModeKey INT FOREIGN KEY REFERENCES DimShippingMode(ShippingModeKey),

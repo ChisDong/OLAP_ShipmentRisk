@@ -166,6 +166,30 @@ BEGIN
 END;
 GO
 ---------
+CREATE TRIGGER trg_DimOrganization_Insert_OnlyNew
+ON DimOrganization
+INSTEAD OF INSERT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    -- Chỉ chèn những Organization_ID chưa có trong DimOrganization
+    INSERT INTO DimOrganization (
+          Organization_ID
+    )
+    SELECT
+          i.Organization_ID
+    
+    FROM inserted AS i
+    WHERE NOT EXISTS (
+        SELECT 1
+        FROM DimOrganization d
+        WHERE d.Organization_ID = i.Organization_ID
+    );
+END;
+GO
+
+---------
 
 CREATE TRIGGER trg_FactShipment_Insert_OnlyNew
 ON FactShipment
