@@ -19,63 +19,70 @@
     <ObjectSnapshots>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
-        <TimeStamp>0vYgpmHRG5d9JNG+2elsQdxzuX8=12/5/2025 5:53:55 PM12/5/2025 5:53:55 PM</TimeStamp>
+        <TimeStamp>YTiwV54zPGENNdgEP208MgeBkQE=12/8/2025 10:14:38 PM12/8/2025 10:14:38 PM</TimeStamp>
         <ID>
           <String>DOAN</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.DataSourceView</Type>
-        <TimeStamp>3482Ie7zbqJEyHCtbLc9G/sFRqM=12/5/2025 5:54:22 PM12/5/2025 5:54:21 PM</TimeStamp>
+        <TimeStamp>VjTKU3EtBxTD6rJMdOJK9Kp0+pc=12/8/2025 10:14:54 PM12/8/2025 10:14:54 PM</TimeStamp>
         <ID>
           <String>DOAN</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>EyDjhHBkD9ihI1J+xuY0k+6Bl5w=12/5/2025 5:54:45 PM12/5/2025 5:54:45 PM</TimeStamp>
-        <ID>
-          <String>Dim Product Category</String>
-        </ID>
-      </ObjectSnapshot>
-      <ObjectSnapshot>
-        <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>uGzLpRQ5RHNvSMEjC82smtF9J1k=12/5/2025 5:54:45 PM12/5/2025 5:54:45 PM</TimeStamp>
-        <ID>
-          <String>Dim Date</String>
-        </ID>
-      </ObjectSnapshot>
-      <ObjectSnapshot>
-        <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>gnlBm+8HdRbPsBxqK2iydCTv5SU=12/5/2025 5:54:45 PM12/5/2025 5:54:45 PM</TimeStamp>
+        <TimeStamp>jxyZ6f4UWIxG6hF38aafqB9nLVY=12/8/2025 10:15:15 PM12/8/2025 10:15:15 PM</TimeStamp>
         <ID>
           <String>Dim Shipping Mode</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>GNfDao8dpxk2MoTaOYxap3fAEN8=12/5/2025 5:54:45 PM12/5/2025 5:54:45 PM</TimeStamp>
+        <TimeStamp>iSwxJK26apuyJRt79r+2XDIDYOE=12/8/2025 10:15:16 PM12/8/2025 10:15:15 PM</TimeStamp>
         <ID>
-          <String>Dim Buyer</String>
+          <String>Dim Date</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>YWGJhB75yvLxxkxYj7ARd8XmMvY=12/5/2025 5:54:45 PM12/5/2025 5:54:45 PM</TimeStamp>
+        <TimeStamp>suVK4iMgd0rjmd+BSz84INH7qwo=12/8/2025 10:15:16 PM12/8/2025 10:15:15 PM</TimeStamp>
         <ID>
           <String>Dim Disruption</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>mhJqJcJ5Az9/wnQDzdcFmTwkT4U=12/5/2025 5:54:45 PM12/5/2025 5:54:45 PM</TimeStamp>
+        <TimeStamp>04KcvgOZNw67U9dhr6ZFeymc7IE=12/8/2025 10:15:16 PM12/8/2025 10:15:15 PM</TimeStamp>
+        <ID>
+          <String>Dim Product Category</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>rGQj0yaHme99i7Cy0RW7bjBPAqI=12/8/2025 10:15:16 PM12/8/2025 10:15:15 PM</TimeStamp>
         <ID>
           <String>Dim Supplier</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>UEYeU6KcEJQFnAsgSmij3EwtM2c=12/8/2025 10:15:16 PM12/8/2025 10:15:15 PM</TimeStamp>
+        <ID>
+          <String>Dim Buyer</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>hOdItEDzm399DJYn8KMQRQNyCJw=12/8/2025 10:15:16 PM12/8/2025 10:15:15 PM</TimeStamp>
+        <ID>
+          <String>Dim Organization</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>EtbMI7CtfhTuxTXfltQstqATX8E=12/5/2025 6:03:07 PM12/5/2025 5:54:45 PML/i0UxzUgWRrLQ+X6wcS6ClSIFw=12/5/2025 5:54:45 PM12/5/2025 5:54:45 PM</TimeStamp>
+        <TimeStamp>ce6ttIAkkZrZZ/5UGdAnpH+R4iM=12/8/2025 10:16:13 PM12/8/2025 10:15:15 PMQD1PpAOyCxFBNmRrutoIChG5WIQ=12/8/2025 10:15:15 PM12/8/2025 10:15:15 PM</TimeStamp>
         <ID>
           <String>DOAN</String>
         </ID>
@@ -92,5 +99,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2025-12-05T14:53:36.3Z</LastDeployed>
+  <LastDeployed>2025-12-08T15:16:15.363333Z</LastDeployed>
 </DeploymentSnapshot>

@@ -20,28 +20,32 @@
   </Cubes>
   <Dimensions>
     <ProjectItem>
-      <Name>Dim Product Category.dim</Name>
-      <FullPath>Dim Product Category.dim</FullPath>
+      <Name>Dim Shipping Mode.dim</Name>
+      <FullPath>Dim Shipping Mode.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Dim Date.dim</Name>
       <FullPath>Dim Date.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Dim Shipping Mode.dim</Name>
-      <FullPath>Dim Shipping Mode.dim</FullPath>
+      <Name>Dim Disruption.dim</Name>
+      <FullPath>Dim Disruption.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Product Category.dim</Name>
+      <FullPath>Dim Product Category.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Supplier.dim</Name>
+      <FullPath>Dim Supplier.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Dim Buyer.dim</Name>
       <FullPath>Dim Buyer.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Dim Disruption.dim</Name>
-      <FullPath>Dim Disruption.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Dim Supplier.dim</Name>
-      <FullPath>Dim Supplier.dim</FullPath>
+      <Name>Dim Organization.dim</Name>
+      <FullPath>Dim Organization.dim</FullPath>
     </ProjectItem>
   </Dimensions>
   <DataSources>
