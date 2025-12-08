@@ -6,6 +6,6 @@ DELETE FROM DimProductCategory;
 DELETE FROM DimShippingMode;
 DELETE FROM DimSupplier;
 
-SELECT * FROM FactShipment
+
 
 		
