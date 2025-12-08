@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="80"
-  DTS:VersionGUID="{FE6743F6-58B0-4A3E-B0E2-7E3242926545}">
+  DTS:VersionBuild="81"
+  DTS:VersionGUID="{2691E842-7643-4F97-BECC-873974B9EC88}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -4644,7 +4644,7 @@ where [refTable].[Organization_ID] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow Task\1556:invalid};</property>
+                  name="ParameterMap">#{Package\Data Flow Task\1552:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."

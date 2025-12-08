@@ -7,7 +7,6 @@ BEGIN
 
     INSERT INTO DimBuyer (
         Buyer_ID,
-        Organization_ID,
         Dominant_Buyer_Flag,
         Available_Historical_Records,
         Data_Sharing_Consent
@@ -15,7 +14,6 @@ BEGIN
     )
     SELECT DISTINCT
         i.Buyer_ID,
-        i.Organization_ID,
         i.Dominant_Buyer_Flag,
         i.Available_Historical_Records,
         i.Data_Sharing_Consent
@@ -24,7 +22,6 @@ BEGIN
         SELECT 1
         FROM DimBuyer d
         WHERE d.Buyer_ID = i.Buyer_ID
-          AND d.Organization_ID = i.Organization_ID
     );
 END;
 GO
