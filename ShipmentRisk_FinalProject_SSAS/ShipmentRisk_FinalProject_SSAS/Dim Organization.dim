@@ -1,6 +1,6 @@
-﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="b91ff410-3692-4f8e-952d-e118723a96b1" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
-  <ID>Dim Date</ID>
-  <Name>Dim Date</Name>
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="c13fb9af-e9e9-42a3-8039-f88f14b30209" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Organization</ID>
+  <Name>Dim Organization</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
   <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
   <Annotations>
@@ -42,28 +42,28 @@
   </Annotations>
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
-  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="6114163f-8a29-48c0-a11f-c636f2ce470c">
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="d8c58603-7f0f-41fa-9c5c-e1dda802552e">
     <DataSourceViewID>DOAN</DataSourceViewID>
   </Source>
   <UnknownMember>Visible</UnknownMember>
-  <ErrorConfiguration dwd:design-time-name="9682290d-1c5f-41d3-a528-5a9dc4945fcd">
+  <ErrorConfiguration dwd:design-time-name="06c8c9d3-004b-4840-8c3e-e369697dd332">
     <KeyNotFound>ReportAndStop</KeyNotFound>
     <KeyDuplicate>ReportAndStop</KeyDuplicate>
     <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
   </ErrorConfiguration>
   <CurrentStorageMode>Molap</CurrentStorageMode>
   <Attributes>
-    <Attribute dwd:design-time-name="aebf9e21-bc27-4133-8a48-55a8cac8a6d8">
-      <ID>Date Key</ID>
-      <Name>Date Key</Name>
+    <Attribute dwd:design-time-name="add97627-750f-4810-83a6-5ea5e97a74d4">
+      <ID>Organization Key</ID>
+      <Name>Organization Key</Name>
       <Usage>Key</Usage>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="3d6f601e-ae65-4a62-ba9e-a7572bd71cf4">
+        <KeyColumn dwd:design-time-name="25d0b0f3-f7fb-4254-a4be-3b78e49610e5">
           <DataType>Integer</DataType>
           <NullProcessing>UnknownMember</NullProcessing>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="5c35ea53-3ec6-4447-a0d9-70e9b54fe343">
-            <TableID>dbo_DimDate</TableID>
-            <ColumnID>DateKey</ColumnID>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9a04943d-fa1c-4b8c-8520-66a744033b45">
+            <TableID>dbo_DimOrganization</TableID>
+            <ColumnID>OrganizationKey</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>

@@ -12,22 +12,25 @@
     </DataSources>
     <Dimensions>
       <Dimension>
-        <ID>Dim Product Category</ID>
+        <ID>Dim Shipping Mode</ID>
       </Dimension>
       <Dimension>
         <ID>Dim Date</ID>
       </Dimension>
       <Dimension>
-        <ID>Dim Shipping Mode</ID>
+        <ID>Dim Disruption</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Product Category</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Supplier</ID>
       </Dimension>
       <Dimension>
         <ID>Dim Buyer</ID>
       </Dimension>
       <Dimension>
-        <ID>Dim Disruption</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Dim Supplier</ID>
+        <ID>Dim Organization</ID>
       </Dimension>
     </Dimensions>
     <Cubes>
