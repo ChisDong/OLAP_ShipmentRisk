@@ -1,0 +1,113 @@
+﻿--1 AVG Communication Cost theo Shipping Mode
+WITH 
+    MEMBER [Measures].[Avg Communication]
+        AS AVG([Dim Shipping Mode].[Shipping Mode Key].Members, [Measures].[Communication Cost MB])
+
+SELECT
+    [Measures].[Avg Communication] ON COLUMNS,
+    [Dim Shipping Mode].[Shipping Mode Key].Members ON ROWS
+FROM [DOAN];
+
+--2 Tổng Order Value theo Buyer
+SELECT
+    [Measures].[Order Value USD] ON COLUMNS,
+    [Dim Buyer].[Buyer Key].MEMBERS ON ROWS
+FROM [DOAN];
+
+--3 Top 5 Supplier có Delay Days cao nhất
+SELECT
+    TOPCOUNT(
+        [Dim Supplier].[Supplier Key].MEMBERS,
+        5,
+        [Measures].[Delay Days]
+    ) ON ROWS,
+    [Measures].[Delay Days] ON COLUMNS
+FROM [DOAN];
+
+--4 Tổng Energy Consumption theo Product Category
+SELECT
+    [Measures].[Energy Consumption Joules] ON COLUMNS,
+    [Dim Product Category].[Product Category Key].MEMBERS ON ROWS
+FROM [DOAN];
+
+--5 Crossjoin Buyer × Supplier (hiển thị Delay Days)
+SELECT
+    [Measures].[Delay Days] ON COLUMNS,
+    NON EMPTY
+        CROSSJOIN(
+            [Dim Buyer].[Buyer Key].MEMBERS,
+            [Dim Supplier].[Supplier Key].MEMBERS
+        ) ON ROWS
+FROM [DOAN];
+
+--6 Order Value theo Organization, sắp xếp giảm dần
+SELECT
+    ORDER(
+        [Dim Organization].[Organization Key].MEMBERS,
+        [Measures].[Order Value USD],
+        DESC
+    ) ON ROWS,
+    [Measures].[Order Value USD] ON COLUMNS
+FROM [DOAN];
+
+--7 Tổng Quantity theo Disruption × Supplier
+SELECT
+    [Measures].[Quantity Ordered] ON COLUMNS,
+    NON EMPTY
+        CROSSJOIN(
+            [Dim Disruption].[Disruption Key].MEMBERS,
+            [Dim Supplier].[Supplier Key].MEMBERS
+        ) ON ROWS
+FROM [DOAN];
+
+--8 Tổng Order Value theo Supplier, chỉ lấy những supplier có tổng > 100000
+SELECT
+    [Measures].[Order Value USD] ON COLUMNS,
+    FILTER(
+        [Dim Supplier].[Supplier Key].MEMBERS,
+        [Measures].[Order Value USD] > 100000
+    ) ON ROWS
+FROM [DOAN];
+
+--9 Rank Supplier theo Quantity
+WITH 
+MEMBER [Measures].[Supplier Rank] AS
+    RANK(
+        [Dim Supplier].[Supplier Key].CURRENTMEMBER,
+        ORDER(
+            [Dim Supplier].[Supplier Key].MEMBERS,
+            [Measures].[Quantity Ordered],
+            BDESC
+        )
+    )
+SELECT
+    {[Measures].[Quantity Ordered], [Measures].[Supplier Rank]} ON COLUMNS,
+    [Dim Supplier].[Supplier Key].MEMBERS ON ROWS
+FROM [DOAN];
+
+--10 Lọc những Buyer có Quantity > 1000
+SELECT
+    [Measures].[Quantity Ordered] ON COLUMNS,
+    FILTER(
+        [Dim Buyer].[Buyer Key].MEMBERS,
+        [Measures].[Quantity Ordered] > 1000
+    ) ON ROWS
+FROM [DOAN];
+
+--11 Top 10 Buyer theo Quantity
+SELECT
+    TOPCOUNT(
+        [Dim Buyer].[Buyer Key].MEMBERS,
+        10,
+        [Measures].[Quantity Ordered]
+    ) ON ROWS,
+    [Measures].[Quantity Ordered] ON COLUMNS
+FROM [DOAN];
+
+
+
+
+
+
+
+
