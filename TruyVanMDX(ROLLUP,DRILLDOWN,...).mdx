@@ -1,0 +1,53 @@
+﻿--1 ROLL-UP — Tổng Order Value theo Year
+SELECT
+    [Measures].[Order Value USD] ON COLUMNS,
+    [Order Date].[Hierarchy].[Year].MEMBERS ON ROWS
+FROM [DOAN];
+
+
+--2 DRILL-DOWN — Year → FullDate
+SELECT
+    [Measures].[Quantity Ordered] ON COLUMNS,
+    DESCENDANTS(
+        [Order Date].[Hierarchy].[Year].MEMBERS, 
+        [Order Date].[Hierarchy].[Date Key],
+    ) ON ROWS
+FROM [DOAN];
+
+-- 5 SLICE — Lọc theo 1 Buyer cụ thể
+SELECT
+    [Measures].[Quantity Ordered] ON COLUMNS,
+    NON EMPTY [Order Date].[Full Date].MEMBERS ON ROWS
+FROM [DOAN]
+WHERE ([Dim Buyer].[Buyer Key].&[818]);
+
+--6 SLICE — Lọc theo 1 Shipping Mode
+SELECT
+    [Measures].[Order Value USD] ON COLUMNS,NON EMPTY
+    [Dim Supplier].[Supplier Key].MEMBERS ON ROWS
+FROM [DOAN]
+WHERE ([Dim Shipping Mode].[Shipping Mode Key].&[173]);
+
+--7 DICE — Lọc nhiều chiều (Buyer + Supplier + Year)
+SELECT 
+    [Measures].[Quantity Ordered] ON COLUMNS,NON EMPTY
+    [Order Date].[YEAR].MEMBERS ON ROWS
+FROM [DOAN]
+WHERE (
+    [Dim Buyer].[Buyer Key].&[801],
+    [Dim Supplier].[Supplier Key].&[510]  
+);
+
+--8 PIVOT — Buyer trên dòng, Supplier trên cột
+SELECT
+    [Dim Supplier].[Supplier Key].MEMBERS ON COLUMNS,
+    [Dim Buyer].[Buyer Key].MEMBERS ON ROWS
+FROM [DOAN]
+WHERE ([Measures].[Quantity Ordered]);
+
+
+
+
+
+
+

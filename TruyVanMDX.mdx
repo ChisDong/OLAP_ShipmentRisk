@@ -17,8 +17,7 @@ FROM [DOAN];
 --3 Top 5 Supplier có Delay Days cao nhất
 SELECT
     TOPCOUNT(
-        [Dim Supplier].[Supplier Key].MEMBERS,
-        5,
+        [Dim Supplier].[Supplier Key].MEMBERS,5,
         [Measures].[Delay Days]
     ) ON ROWS,
     [Measures].[Delay Days] ON COLUMNS

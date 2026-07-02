@@ -3,7 +3,7 @@
     <DataSources>
       <DataSource>
         <ID>DOAN</ID>
-        <ConnectionString>Provider=SQLOLEDB.1;Data Source=LAPTOP-5SE9LHBT\NHIEM;Integrated Security=SSPI;Initial Catalog=DOAN</ConnectionString>
+        <ConnectionString>Provider=SQLOLEDB.1;Data Source=DESKTOP-HN7A246\MSSQLSERVER03;Integrated Security=SSPI;Initial Catalog=DOAN</ConnectionString>
         <ImpersonationInfo>
           <ImpersonationMode xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">ImpersonateServiceAccount</ImpersonationMode>
           <ImpersonationInfoSecurity xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Unchanged</ImpersonationInfoSecurity>
@@ -12,25 +12,25 @@
     </DataSources>
     <Dimensions>
       <Dimension>
-        <ID>Dim Shipping Mode</ID>
-      </Dimension>
-      <Dimension>
         <ID>Dim Date</ID>
       </Dimension>
       <Dimension>
-        <ID>Dim Disruption</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Dim Product Category</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Dim Supplier</ID>
+        <ID>Dim Organization</ID>
       </Dimension>
       <Dimension>
         <ID>Dim Buyer</ID>
       </Dimension>
       <Dimension>
-        <ID>Dim Organization</ID>
+        <ID>Dim Supplier</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Product Category</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Disruption</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Shipping Mode</ID>
       </Dimension>
     </Dimensions>
     <Cubes>

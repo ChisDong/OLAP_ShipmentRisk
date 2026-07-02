@@ -10,7 +10,6 @@ BEGIN
         Dominant_Buyer_Flag,
         Available_Historical_Records,
         Data_Sharing_Consent
-        -- thêm các cột khác nếu có, MIỄN là nullable hoặc có default
     )
     SELECT DISTINCT
         i.Buyer_ID,
@@ -39,7 +38,6 @@ BEGIN
         Supplier_ID,
         Supplier_Reliability_Score,
         Historical_Disruption_Count
-        -- thêm cột khác nếu bảng bạn có
     )
     SELECT DISTINCT
         i.Supplier_ID,
@@ -65,7 +63,6 @@ BEGIN
 
     INSERT INTO DimProductCategory (
         Product_Category
-        -- thêm cột mô tả khác nếu có
     )
     SELECT DISTINCT
         i.Product_Category
@@ -88,7 +85,6 @@ BEGIN
 
     INSERT INTO DimShippingMode (
         Shipping_Mode
-        -- thêm cột mô tả khác nếu có
     )
     SELECT DISTINCT
         i.Shipping_Mode
@@ -112,7 +108,7 @@ BEGIN
     INSERT INTO DimDisruption (
         Disruption_Type,
         Disruption_Severity
-        -- thêm cột khác nếu có
+
     )
     SELECT DISTINCT
         i.Disruption_Type,
@@ -144,7 +140,6 @@ BEGIN
         [Month],
         [Day],
         [DayOfWeek]
-        -- thêm cột khác nếu có
     )
     SELECT DISTINCT
         i.DateKey,
@@ -170,7 +165,6 @@ AS
 BEGIN
     SET NOCOUNT ON;
 
-    -- Chỉ chèn những Organization_ID chưa có trong DimOrganization
     INSERT INTO DimOrganization (
           Organization_ID
     )

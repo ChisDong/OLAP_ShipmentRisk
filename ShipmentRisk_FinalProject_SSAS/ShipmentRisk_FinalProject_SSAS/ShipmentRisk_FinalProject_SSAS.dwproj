@@ -6,46 +6,30 @@
     <Name>ShipmentRisk_FinalProject_SSAS.database</Name>
     <FullPath>ShipmentRisk_FinalProject_SSAS.database</FullPath>
   </Database>
-  <Cubes>
-    <ProjectItem>
-      <Name>DOAN.cube</Name>
-      <FullPath>DOAN.cube</FullPath>
-      <Dependencies>
-        <ProjectItem>
-          <Name>DOAN.partitions</Name>
-          <FullPath>DOAN.partitions</FullPath>
-        </ProjectItem>
-      </Dependencies>
-    </ProjectItem>
-  </Cubes>
   <Dimensions>
     <ProjectItem>
-      <Name>Dim Shipping Mode.dim</Name>
-      <FullPath>Dim Shipping Mode.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Dim Date.dim</Name>
-      <FullPath>Dim Date.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Dim Disruption.dim</Name>
-      <FullPath>Dim Disruption.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Dim Product Category.dim</Name>
-      <FullPath>Dim Product Category.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Dim Supplier.dim</Name>
-      <FullPath>Dim Supplier.dim</FullPath>
+      <Name>Dim Organization.dim</Name>
+      <FullPath>Dim Organization.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Dim Buyer.dim</Name>
       <FullPath>Dim Buyer.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Dim Organization.dim</Name>
-      <FullPath>Dim Organization.dim</FullPath>
+      <Name>Dim Supplier.dim</Name>
+      <FullPath>Dim Supplier.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Product Category.dim</Name>
+      <FullPath>Dim Product Category.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Disruption.dim</Name>
+      <FullPath>Dim Disruption.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Shipping Mode.dim</Name>
+      <FullPath>Dim Shipping Mode.dim</FullPath>
     </ProjectItem>
   </Dimensions>
   <DataSources>
@@ -68,7 +52,7 @@
           <ConfigurationSetting>
             <Id>DOAN</Id>
             <Name>DOAN</Name>
-            <Value xsi:type="xsd:string">Provider=SQLOLEDB.1;Data Source=LAPTOP-5SE9LHBT\NHIEM;Integrated Security=SSPI;Initial Catalog=DOAN</Value>
+            <Value xsi:type="xsd:string">Provider=SQLOLEDB.1;Data Source=DESKTOP-HN7A246\MSSQLSERVER03;Integrated Security=SSPI;Initial Catalog=DOAN</Value>
           </ConfigurationSetting>
         </ConnectionMappings>
         <ConnectionSecurityMappings>
