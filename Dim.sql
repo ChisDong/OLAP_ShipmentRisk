@@ -1,5 +1,5 @@
-﻿CREATE DATABASE DOAN
-USE DOAN
+﻿CREATE DATABASE DOAN1
+USE DOAN1
 
 CREATE TABLE DimDate (
     DateKey     INT         NOT NULL PRIMARY KEY, 
@@ -75,27 +75,4 @@ CREATE TABLE FactShipment (
     Supply_Risk_Flag BIT
 )
 
---NHAP
-Delete From DimDate
-Delete From DimBuyer --NONE
-Delete From DimSupplier --NONE
-Delete From DimProductCategory
-Delete From DimShippingMode
-Delete From DimDisruption
-Delete From FactShipment --NONE
 
-ALTER TABLE DimBuyer
-ALTER COLUMN Organization_ID VARCHAR(50) NOT NULL;
-ALTER TABLE DimSupplier
-ALTER COLUMN Supplier_ID VARCHAR(50) NOT NULL;
-
-ALTER TABLE DimProductCategory
-ALTER COLUMN Product_Category VARCHAR(100) NOT NULL;
-
-ALTER TABLE DimShippingMode
-ALTER COLUMN Shipping_Mode VARCHAR(50) NOT NULL;
-
-ALTER TABLE DimDisruption
-ALTER COLUMN Disruption_Type VARCHAR(100) NOT NULL;
-ALTER TABLE DimDisruption
-ALTER COLUMN Disruption_Severity VARCHAR(50) NULL;

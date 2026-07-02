@@ -3,7 +3,7 @@
     <Configuration>
       <Name>Development</Name>
       <Options>
-        <TargetServer>LAPTOP-5SE9LHBT\NHIEM</TargetServer>
+        <TargetServer>DESKTOP-HN7A246\MSSQLSERVER03</TargetServer>
         <TargetDatabase>ShipmentRisk_FinalProject_SSAS</TargetDatabase>
         <StartObject>
           <ObjectId></ObjectId>
